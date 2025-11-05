@@ -1,0 +1,48 @@
+{
+    "services": [
+      {
+        "attributes": {},
+        "name": "shell",
+        "namespace": "rdk",
+        "type": "shell"
+      },
+      {
+        "api": "rdk:service:generic",
+        "model": "mattmacf:learning-robotics:rgb-led",
+        "attributes": {
+          "board_name": "pi",
+          "red_pin": "32",
+          "green_pin": "33",
+          "blue_pin": "35"
+        },
+        "depends_on": [
+          "pi"
+        ],
+        "name": "rgb-leb"
+      }
+    ],
+    "modules": [
+      {
+        "module_id": "viam:raspberry-pi",
+        "version": "latest",
+        "type": "registry",
+        "name": "viam_raspberry-pi"
+      },
+      {
+        "type": "registry",
+        "name": "mattmacf_learning-robotics_from_reload",
+        "module_id": "mattmacf:learning-robotics",
+        "version": "latest-with-prerelease",
+        "reload_path": "~/.viam/packages-local/mattmacf_learning-robotics_from_reload-module.tar.gz",
+        "reload_enabled": true
+      }
+    ],
+    "components": [
+      {
+        "api": "rdk:component:board",
+        "model": "viam:raspberry-pi:rpi5",
+        "attributes": {},
+        "name": "pi"
+      }
+    ]
+  }

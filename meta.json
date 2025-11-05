@@ -10,6 +10,12 @@
       "model": "mattmacf:learning-robotics:rgb-led",
       "short_description": "Provide a short (100 characters or less) description of this model here",
       "markdown_link": "README.md#model-mattmacflearning-roboticsrgb-led"
+    },
+    {
+      "api": "rdk:service:generic",
+      "model": "mattmacf:learning-robotics:light-switch",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-mattmacflearning-roboticslight-switch"
     }
   ],
   "applications": null,

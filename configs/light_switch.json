@@ -1,0 +1,61 @@
+{
+    "services": [
+      {
+        "attributes": {},
+        "name": "shell",
+        "namespace": "rdk",
+        "type": "shell"
+      },
+      {
+        "name": "light-switch",
+        "api": "rdk:service:generic",
+        "model": "mattmacf:learning-robotics:light-switch",
+        "attributes": {
+          "light_output_pin": "8",
+          "on_button_input_pin": "38",
+          "off_button_input_pin": "40",
+          "board_name": "pi"
+        },
+        "depends_on": [
+          "pi"
+        ]
+      }
+    ],
+    "modules": [
+      {
+        "module_id": "viam:raspberry-pi",
+        "version": "latest",
+        "type": "registry",
+        "name": "viam_raspberry-pi"
+      },
+      {
+        "name": "mattmacf_learning-robotics_from_reload",
+        "module_id": "mattmacf:learning-robotics",
+        "version": "latest-with-prerelease",
+        "reload_path": "~/.viam/packages-local/mattmacf_learning-robotics_from_reload-module.tar.gz",
+        "reload_enabled": true,
+        "type": "registry"
+      }
+    ],
+    "components": [
+      {
+        "api": "rdk:component:board",
+        "model": "viam:raspberry-pi:rpi5",
+        "attributes": {
+          "pins": [
+            {
+              "pull": "up",
+              "name": "pull-up-1",
+              "pin": "38"
+            },
+            {
+              "pull": "up",
+              "name": "pull-up-2",
+              "pin": "40"
+            }
+          ]
+        },
+        "name": "pi"
+      }
+    ]
+  }

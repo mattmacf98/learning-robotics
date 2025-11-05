@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"learningrobotics"
+
 	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/resource"
 	generic "go.viam.com/rdk/services/generic"
@@ -22,7 +23,7 @@ func realMain() error {
 	deps := resource.Dependencies{}
 	// can load these from a remote machine if you need
 
-	cfg := learningrobotics.Config{}
+	cfg := learningrobotics.RGBLedConfig{}
 
 	thing, err := learningrobotics.NewRgbLed(ctx, deps, generic.Named("foo"), &cfg, logger)
 	if err != nil {
