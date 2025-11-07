@@ -16,6 +16,12 @@
       "model": "mattmacf:learning-robotics:light-switch",
       "short_description": "Provide a short (100 characters or less) description of this model here",
       "markdown_link": "README.md#model-mattmacflearning-roboticslight-switch"
+    },
+    {
+      "api": "rdk:component:sensor",
+      "model": "mattmacf:ultra-sensor:ultrasonic-sensor",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-mattmacfultra-sensorultrasonic-sensor"
     }
   ],
   "applications": null,

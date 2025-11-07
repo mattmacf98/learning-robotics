@@ -3,6 +3,7 @@ package main
 import (
 	"learningrobotics"
 
+	sensor "go.viam.com/rdk/components/sensor"
 	"go.viam.com/rdk/module"
 	"go.viam.com/rdk/resource"
 	generic "go.viam.com/rdk/services/generic"
@@ -13,5 +14,6 @@ func main() {
 	module.ModularMain(
 		resource.APIModel{generic.API, learningrobotics.RgbLed},
 		resource.APIModel{generic.API, learningrobotics.LightSwitch},
+		resource.APIModel{sensor.API, learningrobotics.UltrasonicSensor},
 	)
 }

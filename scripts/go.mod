@@ -3,6 +3,7 @@ module learning-robotics-scripts
 go 1.25.3
 
 require (
+	github.com/d2r2/go-dht v0.0.0-20200119175940-4ba96621a218
 	github.com/joho/godotenv v1.5.1
 	go.viam.com/rdk v0.99.0
 	go.viam.com/utils v0.2.2
@@ -30,6 +31,8 @@ require (
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/chenzhekl/goply v0.0.0-20190930133256-258c2381defd // indirect
 	github.com/cloudwego/base64x v0.1.6 // indirect
+	github.com/d2r2/go-logger v0.0.0-20210606094344-60e9d1233e22 // indirect
+	github.com/d2r2/go-shell v0.0.0-20211022052110-f591c27e3e2e // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.2.0 // indirect
 	github.com/desertbit/timer v0.0.0-20180107155436-c41aec40b27f // indirect

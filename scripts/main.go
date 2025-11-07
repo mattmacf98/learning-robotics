@@ -51,7 +51,7 @@ func main() {
 	}
 
 	defer machine.Close(context.Background())
-	err = LightSwitch(machine)
+	err = UltraSensorRead(machine)
 	if err != nil {
 		logger.Fatal(err)
 	}

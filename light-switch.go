@@ -13,8 +13,7 @@ import (
 )
 
 var (
-	LightSwitch      = resource.NewModel("mattmacf", "learning-robotics", "light-switch")
-	errUnimplemented = errors.New("unimplemented")
+	LightSwitch = resource.NewModel("mattmacf", "learning-robotics", "light-switch")
 )
 
 func init() {
