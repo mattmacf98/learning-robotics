@@ -1,0 +1,39 @@
+{
+    "components": [
+      {
+        "name": "pi",
+        "api": "rdk:component:board",
+        "model": "viam:raspberry-pi:rpi5",
+        "attributes": {}
+      },
+      {
+        "name": "ultrasonic-sensor",
+        "api": "rdk:component:sensor",
+        "model": "mattmacf:learning-robotics:ultrasonic-sensor",
+        "attributes": {
+          "trigger_pin": "8",
+          "echo_interrupt_pin": "10",
+          "board_name": "pi"
+        },
+        "depends_on": [
+          "pi"
+        ]
+      }
+    ],
+    "modules": [
+      {
+        "type": "registry",
+        "name": "viam_raspberry-pi",
+        "module_id": "viam:raspberry-pi",
+        "version": "latest"
+      },
+      {
+        "type": "registry",
+        "name": "mattmacf_learning-robotics_from_reload",
+        "module_id": "mattmacf:learning-robotics",
+        "version": "latest-with-prerelease",
+        "reload_path": "~/.viam/packages-local/mattmacf_learning-robotics_from_reload-module.tar.gz",
+        "reload_enabled": true
+      }
+    ]
+  }
