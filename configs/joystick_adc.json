@@ -1,0 +1,63 @@
+{
+    "components": [
+      {
+        "name": "pi",
+        "api": "rdk:component:board",
+        "model": "viam:raspberry-pi:rpi4",
+        "attributes": {
+          "analogs": [
+            {
+              "chip_select": "0",
+              "spi_bus": "0",
+              "name": "y",
+              "channel": "0"
+            },
+            {
+              "channel": "1",
+              "chip_select": "0",
+              "spi_bus": "0",
+              "name": "x"
+            }
+          ]
+        }
+      },
+      {
+        "name": "joystick-adc",
+        "api": "rdk:component:sensor",
+        "model": "mattmacf:learning-robotics:joystick-adc",
+        "attributes": {
+          "y_ao_pin": "y",
+          "x_ao_pin": "x",
+          "select_gpio_pin": "7",
+          "board_name": "pi"
+        },
+        "depends_on": [
+          "pi"
+        ]
+      }
+    ],
+    "services": [
+      {
+        "name": "shell",
+        "namespace": "rdk",
+        "type": "shell",
+        "attributes": {}
+      }
+    ],
+    "modules": [
+      {
+        "type": "registry",
+        "name": "viam_raspberry-pi",
+        "module_id": "viam:raspberry-pi",
+        "version": "latest"
+      },
+      {
+        "type": "registry",
+        "name": "mattmacf_learning-robotics_from_reload",
+        "module_id": "mattmacf:learning-robotics",
+        "version": "latest-with-prerelease",
+        "reload_path": "~/.viam/packages-local/mattmacf_learning-robotics_from_reload-module.tar.gz",
+        "reload_enabled": true
+      }
+    ]
+  }

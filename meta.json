@@ -19,9 +19,15 @@
     },
     {
       "api": "rdk:component:sensor",
-      "model": "mattmacf:ultra-sensor:ultrasonic-sensor",
+      "model": "mattmacf:learning-robotics:ultrasonic-sensor",
       "short_description": "Provide a short (100 characters or less) description of this model here",
-      "markdown_link": "README.md#model-mattmacfultra-sensorultrasonic-sensor"
+      "markdown_link": "README.md#model-mattmacflearning-roboticsultrasonic-sensor"
+    },
+    {
+      "api": "rdk:component:sensor",
+      "model": "mattmacf:learning-robotics:adc-joystick",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-mattmacflearning-roboticsadc-joystick"
     }
   ],
   "applications": null,
