@@ -51,7 +51,7 @@ func main() {
 	}
 
 	defer machine.Close(context.Background())
-	err = ADC(machine)
+	err = RgbPriorityQueue(machine)
 	if err != nil {
 		logger.Fatal(err)
 	}

@@ -28,6 +28,18 @@
       "model": "mattmacf:learning-robotics:adc-joystick",
       "short_description": "Provide a short (100 characters or less) description of this model here",
       "markdown_link": "README.md#model-mattmacflearning-roboticsadc-joystick"
+    },
+    {
+      "api": "rdk:component:switch",
+      "model": "mattmacf:learning-robotics:rgb-pq",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-mattmacflearning-roboticsrgb-pq"
+    },
+    {
+      "api": "rdk:service:generic",
+      "model": "mattmacf:learning-robotics:rgb-priority-queue",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-mattmacflearning-roboticsrgb-priority-queue"
     }
   ],
   "applications": null,
