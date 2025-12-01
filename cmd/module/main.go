@@ -19,5 +19,6 @@ func main() {
 		resource.APIModel{sensor.API, learningrobotics.JoystickAdc},
 		resource.APIModel{sw.API, learningrobotics.RgbPq},
 		resource.APIModel{generic.API, learningrobotics.PriorityQueueSwitch},
+		resource.APIModel{generic.API, learningrobotics.EventSystem},
 	)
 }

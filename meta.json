@@ -40,6 +40,12 @@
       "model": "mattmacf:learning-robotics:rgb-priority-queue",
       "short_description": "Provide a short (100 characters or less) description of this model here",
       "markdown_link": "README.md#model-mattmacflearning-roboticsrgb-priority-queue"
+    },
+    {
+      "api": "rdk:service:generic",
+      "model": "mattmacf:learning-robotics:event-system",
+      "short_description": "Provide a short (100 characters or less) description of this model here",
+      "markdown_link": "README.md#model-mattmacflearning-roboticevent-system"
     }
   ],
   "applications": null,

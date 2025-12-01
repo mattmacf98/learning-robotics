@@ -1,9 +1,10 @@
 package main
 
 import (
-	"context"
 	"log"
 	"os"
+
+	"context"
 
 	"github.com/joho/godotenv"
 	"go.viam.com/rdk/logging"
@@ -51,7 +52,7 @@ func main() {
 	}
 
 	defer machine.Close(context.Background())
-	err = RgbPriorityQueue(machine)
+	err = EventSystem(machine)
 	if err != nil {
 		logger.Fatal(err)
 	}
