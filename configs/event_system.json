@@ -1,0 +1,77 @@
+{
+    "components": [
+      {
+        "name": "pi",
+        "api": "rdk:component:board",
+        "model": "viam:raspberry-pi:rpi4",
+        "attributes": {}
+      },
+      {
+        "name": "sensor-1",
+        "api": "rdk:component:sensor",
+        "model": "mattmacf:learning-robotics:ultrasonic-sensor",
+        "attributes": {
+          "trigger_pin": "35",
+          "echo_interrupt_pin": "37",
+          "board_name": "pi"
+        },
+        "depends_on": [
+          "pi"
+        ]
+      },
+      {
+        "name": "rgb",
+        "api": "rdk:component:switch",
+        "model": "mattmacf:learning-robotics:rgb-pq",
+        "attributes": {
+          "red_pin": "8",
+          "green_pin": "10",
+          "blue_pin": "12",
+          "board_name": "pi"
+        },
+        "depends_on": [
+          "pi"
+        ]
+      }
+    ],
+    "services": [
+      {
+        "name": "shell",
+        "namespace": "rdk",
+        "type": "shell",
+        "attributes": {}
+      },
+      {
+        "name": "event-system",
+        "api": "rdk:service:generic",
+        "model": "mattmacf:learning-robotics:event-system",
+        "attributes": {
+          "rgb_switch_name": "rgb",
+          "board_name": "pi",
+          "buzzer_pin": "32",
+          "ultrasonic_sensor_name": "sensor-1"
+        },
+        "depends_on": [
+          "rgb",
+          "sensor-1",
+          "pi"
+        ]
+      }
+    ],
+    "modules": [
+      {
+        "type": "registry",
+        "name": "viam_raspberry-pi",
+        "module_id": "viam:raspberry-pi",
+        "version": "latest"
+      },
+      {
+        "type": "registry",
+        "name": "mattmacf_learning-robotics_from_reload",
+        "module_id": "mattmacf:learning-robotics",
+        "version": "latest-with-prerelease",
+        "reload_path": "~/.viam/packages-local/mattmacf_learning-robotics_from_reload-module.tar.gz",
+        "reload_enabled": true
+      }
+    ]
+  }
