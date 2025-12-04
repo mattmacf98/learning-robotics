@@ -48,7 +48,7 @@ func (cfg *RGBPQConfig) Validate(path string) ([]string, []string, error) {
 	if cfg.BoardName == "" {
 		return nil, nil, errors.New("board_name is required")
 	}
-	return nil, nil, nil
+	return []string{cfg.BoardName}, nil, nil
 }
 
 type learningRoboticsRgbPq struct {

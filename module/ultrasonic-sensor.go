@@ -46,7 +46,7 @@ func (cfg *UltrasonicSensorConfig) Validate(path string) ([]string, []string, er
 	if cfg.BoardName == "" {
 		return nil, nil, errors.New("board_name is required")
 	}
-	return nil, nil, nil
+	return []string{cfg.BoardName}, nil, nil
 }
 
 type ultraSensorUltrasonicSensor struct {
